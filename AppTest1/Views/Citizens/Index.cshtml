@@ -1,0 +1,131 @@
+﻿@model IEnumerable<AppTest1.Models.Citizen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DBRNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CitizenName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBorn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BOD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BODText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Side)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eliminate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Governorate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentOfHealth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QRCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DBRNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitizenName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBorn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BODText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherWork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Side)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eliminate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Governorate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentOfHealth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QRCode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CitizenId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CitizenId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CitizenId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
